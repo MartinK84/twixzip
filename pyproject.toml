@@ -46,6 +46,3 @@ testpaths = ["test"]
 [tool.flake8]
 max-line-length = 127
 max-complexity = 10
-exclude = [
-    "_version.py"
-]
