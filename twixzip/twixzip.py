@@ -483,8 +483,10 @@ def compress_twix(
                 # store mdh
                 info.mdh_info = mdb.mdh
 
-                if is_syncscan or mdb.is_flag_set('ACQEND'):
+                if mdb.is_flag_set('ACQEND'):
                     data = np.ascontiguousarray(mdb.data).view('uint64')
+                elif is_syncscan:
+                    data = np.ascontiguousarray(mdb.data.tobytes()).view('uint64')
                 else:
                     restrictions = get_restrictions(mdb.get_flags())
                     if restrictions == 'NO_COILCOMP':
