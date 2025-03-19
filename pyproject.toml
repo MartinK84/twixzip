@@ -12,7 +12,7 @@ authors = [{ name = "Philipp Ehses", email = "philipp.ehses@dzne.de" }]
 keywords = ["twix", "siemens", "mri"]
 requires-python = ">=3.9, <4"
 dependencies = [
-    "twixtools @ git+https://github.com/pehses/twixtools.git#egg=twixtools",  # root project
+    "twixtools @ git+https://github.com/MartinK84/twixtools.git#egg=twixtools", 
     "tables>=3.6.1",
     "zfpy>=1.0.0"
 ]
